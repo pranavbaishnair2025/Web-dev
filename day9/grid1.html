@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      background-color: palegreen;
+      font-weight: bold;
+    }
+
+    .products{
+      display: grid;
+      /* grid-template-columns: repeat(2, 300px); */
+      /* in repeat u hv to write no. of cols and size of cols */
+      /* instead of px use fr since it auto adjusts acc to the screen u r using */
+      /* grid-template-columns: repeat(2, 1fr); */
+      background-color: lightblue;
+      padding: 20px;
+      gap: 10px;
+      /* if u want to adjust acc to screen then use the below line instead of the grid-template-columns line */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  </style>
+</head>
+<body>
+  <div class="products">
+    <div class="box">Cake</div>
+    <div class="box">Price:25$</div>
+    <div class="box">Cookie</div>
+    <div class="box">Price:15$</div>
+    <div class="box">Pastry</div>
+    <div class="box">Price:20$</div>
+  </div>
+</body>
+</html>

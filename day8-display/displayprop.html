@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      color: red;
+    }
+
+    div .ex1{
+      display: none;
+    }
+
+    div .ex2{
+      display: block;
+      /* now nothing else can be done in same line */
+      background-color: lightblue;
+    }
+
+    div .ex3{
+      display: inline;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    display:none means to show nothing , simply hide content
+    <p class="ex1">Hello display none</p>
+  </div>
+
+  <div>
+    display:block , its smaller to div container since it takes 100% width of space
+    <p class="ex2">Hello display block</p>
+  </div>
+
+  <div>
+    display:inline , it takes only the required space and can be in same line with other elements
+    <p class="ex3">Hello display inline</p>
+  </div>
+</body>
+</html>

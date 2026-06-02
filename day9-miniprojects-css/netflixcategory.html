@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    header{
+      display: flex; /* this is so that movie zone and the nav bar are on the same line */
+      justify-content: space-between; 
+      border: 2px solid black;
+      align-items: center; /*this makes heading and nav bar appear in center */
+      padding: 10px;
+    }
+
+    nav a{
+      display: inline;
+      text-decoration: none; /* removes the blue highlight on the text before */
+      color: black;
+      padding: 8px;
+      margin-left: 10px;
+    }
+
+    nav a:hover{
+      background: black;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .categories{
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .category{
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .category:hover{
+      background: black;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .movies{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .movie-card{
+      border: 2px solid black;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .movie-card:hover{
+      transform: scale(1.05);
+      transition: 2s;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- netflix movie categories layout -->
+   <header>
+    <h1>Movie Zone</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Series</a>
+      <a href="#">My List</a>
+    </nav>
+   </header>
+
+   <section class="categories">
+    <div class="category">Action</div>
+    <div class="category">Comedy</div>
+    <div class="category">Drama</div>
+    <div class="category">Horror</div>
+   </section>
+
+   <section class="movies">
+    <div class="movie-card">
+      <h3>Avengers</h3>
+    </div>
+    <div class="movie-card">
+      <h3>Spiderman</h3>
+    </div>
+    <div class="movie-card">
+      <h3>Batman</h3>
+    </div>
+    <div class="movie-card">
+      <h3>Superman</h3>
+    </div>
+    <div class="movie-card">
+      <h3>Titanic</h3>
+    </div>
+    <div class="movie-card">
+      <h3>Inception</h3>
+    </div>
+   </section>
+   
