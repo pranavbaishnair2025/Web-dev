@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //task is to draw dice and guess lucky no.
+    let luckyno=Math.floor(Math.random()*6)+1
+    console.log(luckyno)
+
+    guess=prompt("Guess the lucky no. between 1 to 6")
+    if(guess==luckyno){
+      alert("You guessed it right")
+    }
+    else{
+      alert("You guessed it wrong. The lucky no. is "+luckyno)
+    }
+  </script>
+</body>
+</html>

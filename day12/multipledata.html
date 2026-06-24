@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let students=["John","Jane","Jack","Jill"]
+    console.log(students)
+    students.push("Jerry")
+
+    console.log(students)
+    students.unshift("Jasmine") //adds at beginning
+
+    console.log(students)
+    students.pop() //removes last element
+
+    console.log(students)
+    students.shift() //removes first element
+
+    console.log(students)
+
+    students.splice(1,2,"Joe","Jenny") //removes 2 elements from index 1 and adds new elements
+    console.log(students)
+
+
+    var emp={
+      name:"John",
+      age:30,
+      city:"New York"
+    }
+    console.log(emp)
+  </script>
+</body>
+</html>
