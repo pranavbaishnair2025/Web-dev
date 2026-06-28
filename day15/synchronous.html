@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // synchronous means it waits for prev process to complete even if it takes lesser time
+    // task 1 sandwich : 10 sec
+    function sandwich(){
+      console.log("step 1 bread")
+      console.log("step 2 butter")
+      console.log("step 3 toppings")
+      console.log("step 4 another bread")
+    }
+
+    // task 2 : 2 sec
+    function dohomework(){
+      console.log("doing hw")
+    }
+    //since its synchronous it does step by step so task 2 waits for task 1 despite being lesser time
+  </script>
+</body>
+</html>

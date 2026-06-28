@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- dom helps us to connect html and js -->
+   <p id="myp">Good evening</p>
+   <button id="btn">Login</button>
+   <div class="myc">This is class 1</div>
+   <div class="myc">This is class 2</div>
+   <p>hello good morning</p>
+   <p>hello good afternoon</p>
+   <div class="xyz">amazon-ecommerce</div>
+   <div class="xyz">netflix-ott</div>
+
+   <script>
+    // 1st method
+    var ele=document.getElementById("myp") //selected the name with id myp
+    console.log(ele)
+    const ele1=document.getElementById("btn") //selected the name with tag btn
+    console.log(ele1) 
+
+    // 2nd method
+    const ele2=document.getElementsByClassName("myc") //selected the name with class myc
+    console.log(ele2) //it will return an array of elements with class myc since there are 2 divs with class myc
+    console.log(ele2[0]) //it will return the first element of the array
+    console.log(ele2[0].textContent) //it will return the text content of the first element of the array
+
+    // 3rd method
+    const ele3=document.getElementsByTagName("p") //selected the name with tag p
+    console.log(ele3) //it will return an array of elements with tag p since there are 3 p tags
+    // since there r 3 p tags u can print whichever u want based on indexing
+
+    // 4th method
+    const ele4=document.querySelector(".xyz") //selected the name with class xyz
+    console.log(ele4) //it will return the first element with class xyz
+    // this displays only 1 of those div containers with name xyz since querySelector only returns the first element of the array
+
+    // 5th method
+    const ele5=document.querySelectorAll(".xyz") //selected the name with class xyz
+    console.log(ele5) //it will return an array of elements with class xyz since there are 2 divs with class xyz    
+   </script>
+   
+</body>
+</html>

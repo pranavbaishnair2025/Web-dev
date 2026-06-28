@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //callback is to achieve asynchronous pgming , callback is a function
+    //callback is passed as a parameter
+    function dohw(subject,callback){
+      console.log("doing hw ",subject)
+      callback() //calling callback function
+    }
+    dohw("math",function(){
+      console.log("doing hw rn")
+    })
+  </script>
+</body>
+</html>

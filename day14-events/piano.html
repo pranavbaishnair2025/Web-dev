@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    .piano{
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .key{
+      border: 1px solid black;
+      height: 200px;
+      width: 60px;
+      margin: 2px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .key:active{
+      background-color: #ddd;
+    }
+    /* use pixabay */
+  </style>
+</head>
+<body>
+  <h1>Piano - events</h1>
+  <div class="piano">
+    <div class="key" data-note="C">C</div>
+    <div class="key" data-note="D">D</div>
+    <div class="key" data-note="E">E</div>
+    <div class="key" data-note="F">F</div>
+    <div class="key" data-note="A">A</div>
+    <div class="key" data-note="B">B</div>
+  </div>
+
+  <audio id="audio-C" src="./freesound_community-c-soft-44021.mp3"></audio>
+  <audio id="audio-D" src="./freesound_community-c3-95007.mp3"></audio>
+  <audio id="audio-E" src="./freesound_community-la-80237.mp3"></audio>
+  <audio id="audio-F" src="./freesound_community-piano-g-6200.mp3"></audio>
+  <audio id="audio-A" src="./u_op8btczor7-piano-f-508249.mp3"></audio>
+  <audio id="audio-B" src="./u_c58whxla22-c-422088.mp3"></audio>
+
+  <script>
+    const keys=document.querySelectorAll(".key")
+    console.log(keys)
+
+    keys.forEach(function(e){
+      const note=e.getAttribute("data-note")
+      const audio=document.getElementById("audio-"+note)
+      e.addEventListener('click',function(){
+        audio.currentTime=0
+        audio.play()
+      })
+    })
+  </script>
+</body>
+</html>

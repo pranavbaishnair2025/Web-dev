@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="text">Good evening</p>
+  <button id="btn">Login</button>
+  <div id="mydiv">this is div</div>
+  <p id="newp">This is old para</p>
+  <div id="container"></div>
+  <ul id="mylist"></ul>
+
+  <script>
+    // 1) update text
+    const para=document.getElementById("text")
+    para.textContent="Good morning" //it will change the text content of the paragraph with id text to Good morning
+    console.log(para.textContent) //it will return Good morning since we have changed the text content of the paragraph with id text to Good morning
+
+    const button=document.getElementById("btn")
+    button.textContent="Logout"
+
+    // 2) changing content of tag
+    const div=document.getElementById("mydiv")
+    console.log(div)
+    // div.innerHTML="<h1>This is now a heading</h1"
+    // above line can be used to change to heading but u do way more
+    div.innerHTML=`
+    <pid="myp">Hello this <mark>updated</mark></p>
+    <button>Smile</button>
+    <em>happy weekend</em>`
+
+    const ele3=document.getElementById("newp")
+    //.style property name
+    ele3.style.color="red"
+    ele3.style.backgroundColor="black"
+    ele3.style.textAlign="center"
+    ele3.textContent="new text"
+
+    //create element(tag)
+    const paras=document.createElement("p")
+    //add text
+    paras.innerText="created using js"
+    document.getElementById("container").appendChild(paras)
+
+    const li=document.createElement("li")
+    li.innerText="apple"
+    document.getElementById("mylist").appendChild(li)
+
+  </script>
+</body>
+</html>

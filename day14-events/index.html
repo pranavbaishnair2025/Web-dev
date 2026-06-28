@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">Add to cart</button>
+  <p id="msg"></p>
+
+  <script>
+    const button=document.getElementById("btn")
+    const message=document.getElementById("msg")
+
+    //tag = variable.addeventlistener('type of event(action)',task)
+    button.addEventListener('click',function(){  //dblclick is for double click , can use dblclick also
+      message.textContent="Item added to cart"
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  // https://cdn2.thecatapi.com/images/387.jpg
+  // https://api.thecatapi.com/v1/images/search
+  <img id="cat" src="">
+
+  <script>
+    const catimg=document.getElementById("cat")
+    fetch("https://api.thecatapi.com/v1/images/search")
+    .then(res=> res.json())
+   // .then(data=> console.log(data[0].url))
+    .then(res=> {
+      console.log(data[0].url)
+      catimg.src=data[0].url
+    })
+
+    .catch(err=> console.log("error connection",err))
+  </script>
+</body>
+</html>
