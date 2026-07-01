@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  // https://www.omdbapi.com/ provides info related to movie , gives api
+  // never share ur api key in github or anyone in general
+  <script>
+    //enter ur api key after equal sign below
+    // then after question mark enter appropriate parameter (check from website)
+    //api - http://www.omdbapi.com/?t=MovieName&apikey=7e753fd7
+    // instead of movie name u shld copy this link and type an actual movie in its place
+    async function getmovie(moviename){
+      //async functions helps handle multiple tasks at the same time
+      //getting data from api
+      let url=`http://www.omdbapi.com/?t=${moviename}&apikey=7e753fd7`
+      // we put $ and {} for movie name since its a parameter now
+      try{
+        //getting data from api
+        let response=await fetch(url)
+        let data=await response.json()
+        console.log(data)
+        if(data.Response==True){
+          console.log(`Title ${data.Title}`)
+          console.log(`Year ${data.Year}`)
+        }
+      }catch(error){
+        console.log("error fetching",error)
+      }
+    }
+    getmovie("Avengers")
+    function extratask(){
+      console.log("Hello guys welcome to js")
+    }
+    extratask()
+  </script>
+</body>
+</html>
