@@ -12,7 +12,7 @@ buttons.forEach(btn=>{
 //task 2 is search movies based on mood
 async function fetchmovie(moviename){
   moviecontainer.innerHTML="<h2>Loading....</h2>"
-  let url=`http://www.omdbapi.com/?t={moviename}&apikey=7e753fd7`
+  let url=`http://www.omdbapi.com/?s=${moviename}&apikey=7e753fd7`
   const response=await fetch(url)
   const data=await response.json()
   displaymovie(data.Search)
